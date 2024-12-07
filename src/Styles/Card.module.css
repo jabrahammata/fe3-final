@@ -1,0 +1,91 @@
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100vh; 
+  margin: 0 auto; /* Centra el contenedor */
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 0 0 calc(25% - 10px); /* 4 tarjetas por fila */
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; 
+  height: 380px; 
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18), 0 0 12px 4px rgba(0, 139, 248, 0.4);
+}
+
+.card img {
+  width: 220px;
+  height: 240px;
+  border-radius: 3%;
+  padding: 8px;
+}
+
+.card h2 {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+} 
+
+.card h2:hover {
+  color: #008bf8;
+  transform: scale(1.05); 
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0px;
+  margin-top: 8px; 
+}
+
+.favButton {
+  background-color: #f1f1f1;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+  margin-top: 8px; 
+  align-self: center; 
+}
+
+.favButton:hover {
+  background-color: #eceaea;
+}
+
+.favButton:active {
+  background-color: #dbd7d7;
+}
+
+.starIcon {
+  stroke: black;
+  stroke-width: 1.2px;
+  transition: color 0.3s ease;
+}
+
+.dark .starIcon {
+  color: transparent !important;
+}
+
+.favButton:hover .starIcon {
+  color: yellow; /* Cambia a amarillo cuando el usuario hace hover */
+}
+
+
